@@ -1,0 +1,14 @@
+.add-font(@font-url, @font-name, @font-weight: normal, @font-style: normal) {
+  font-family: @font-name;
+  src: url('@{font-folder}@{font-url}.eot'); //IE9 Compat Modes
+  src: url('@{font-folder}@{font-url}.eot?#iefix') format('embedded-opentype'), //IE6-8
+  url('@{font-folder}@{font-url}.woff') format('woff'), //Modern Browsers
+  url('@{font-folder}@{font-url}.ttf') format('truetype'), //Safari, Android, iOS
+  url('@{font-folder}@{font-url}.svg#@{font-name}') format('svg'); //Legacy iOS
+  font-weight: normal;
+  font-style: italic;
+}
+
+.transition(@prop: all, @time: 0.3s, @ease: ease-in-out) {
+  transition: @prop @time @ease;
+}
